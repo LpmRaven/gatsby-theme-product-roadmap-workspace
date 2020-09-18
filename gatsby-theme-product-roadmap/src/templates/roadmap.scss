@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+.c-roadmap-event {
+    font-size: 1rem;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+}
+
+.c-roadmap-event__ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    .c-roadmap-event__li {
+        padding: 0;
+        margin: 0;
+
+        .svg-wrapper {
+            width: 50%;
+            align-self: flex-start;
+            // max-width: 500px;
+            // height: 300px;
+
+            .svg-container {
+                > svg {
+                    position: relative;
+                    width: 100%;
+                    fill: none;
+                    g {
+                        path:first-of-type {
+                            d: path(
+                                "
+                                M480,20
+                                L480,25
+                                C480,90 425,145 350,145
+                                L125,145
+                                C50,145 20,200 20,250
+                                L20,280
+                                "
+                            );
+                            stroke: #40b856;
+                            opacity: 0.3;
+                            stroke-width: 20px;
+                            stroke-dasharray: 0, 0;
+                            stroke-linecap: round;
+                        }
+                        path:nth-of-type(2) {
+                            d: path(
+                                "
+                                M480,20
+                                L480,25
+                                C480,90 425,145 350,145
+                                L125,145
+                                C50,145 20,200 20,250
+                                L20,280
+                                "
+                            );
+                            stroke: #40b856;
+                            stroke-width: 2px;
+                            stroke-dasharray: 5, 5;
+                            stroke-linecap: round;
+                        }
+                        circle {
+                            fill: white;
+                            &:first-of-type {
+                                stroke: #40b856;
+                                stroke-width: 2px;
+                                cx: 480;
+                                cy: 20;
+                                r: 5;
+                            }
+                            &:last-of-type {
+                                stroke: #40b856;
+                                stroke-width: 2px;
+                                cx: 20;
+                                cy: 280;
+                                r: 5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(even) {
+            .svg-wrapper {
+                width: 100%;
+                margin: -2em 0;
+                .svg-container {
+                    > svg {
+                        > g {
+                            > path:first-of-type {
+                                stroke-width: 10px;
+                            }
+                            path:nth-of-type(2) {
+                                stroke-width: 1px;
+                                stroke-dasharray: 2.5, 2.5;
+                                stroke-linecap: round;
+                            }
+                            circle {
+                                stroke-width: 1px;
+                                r: 2.5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(odd) {
+            .svg-wrapper {
+                width: 100%;
+                margin: -2em 0;
+                .svg-container {
+                    > svg {
+                        transform: scaleX(-1);
+                        > g {
+                            > path:first-of-type {
+                                stroke-width: 10px;
+                            }
+                            path:nth-of-type(2) {
+                                stroke-width: 1px;
+                                stroke-dasharray: 2.5, 2.5;
+                                stroke-linecap: round;
+                            }
+                            circle {
+                                stroke-width: 1px;
+                                r: 2.5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            .svg-wrapper {
+                width: 50%;
+                margin: 0 2%;
+                .svg-container {
+                    > svg {
+                        > g {
+                            > path:first-of-type {
+                                stroke-width: 20px;
+                            }
+                            path:nth-of-type(2) {
+                                stroke-width: 2px;
+                                stroke-dasharray: 5, 5;
+                                stroke-linecap: round;
+                            }
+                            circle {
+                                stroke-width: 2px;
+                                r: 5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:first-of-type {
+            .svg-wrapper {
+                display: none;
+            }
+        }
+
+        &:last-of-type {
+            &:nth-of-type(odd) {
+                .svg-wrapper {
+                    align-self: flex-start;
+                }
+            }
+            &:nth-of-type(even) {
+                .svg-wrapper {
+                    align-self: flex-end;
+                }
+            }
+
+            .svg-wrapper {
+                width: 50%;
+                margin: 0 2%;
+                .svg-container {
+                    > svg {
+                        > g {
+                            > path:first-of-type {
+                                stroke-width: 20px;
+                            }
+                            path:nth-of-type(2) {
+                                stroke-width: 2px;
+                                stroke-dasharray: 5, 5;
+                                stroke-linecap: round;
+                            }
+                            circle {
+                                stroke-width: 2px;
+                                r: 5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        p {
+            font-size: 1.2em;
+            padding: 0;
+            margin: 0;
+
+            &:first-of-type {
+                font-size: 2em;
+                font-weight: 700;
+                padding-bottom: 0.5em;
+                line-height: 1em;
+            }
+        }
+
+        time {
+            font-size: 2.5em;
+            color: #40b856;
+            font-weight: 700;
+            //padding: 0.5em;
+            align-self: center;
+            text-align: center;
+        }
+    }
+}
+
+.c-roadmap-event__flex-container {
+    display: flex;
+    flex-direction: column;
+}
+.c-roadmap-event__flex-item {
+    flex: 0 0 auto;
+}
+
+.c-roadmap-content__flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.c-roadmap-event-li__flex-container {
+    display: flex;
+
+    .c-roadmap-content__flex-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5em 1em;
+
+        p {
+            flex: 1 1 auto;
+        }
+    }
+
+    &:nth-of-type(odd) {
+        flex-direction: column;
+        align-items: flex-end;
+
+        > .c-roadmap-event-li__flex-item {
+            align-items: flex-end;
+
+            > .c-roadmap-content__flex-item:nth-child(1) {
+                order: 2;
+                padding-right: 0;
+            }
+            > .c-roadmap-content__flex-item:nth-child(2) {
+                order: 1;
+            }
+        }
+    }
+
+    &:nth-of-type(even) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        > .c-roadmap-event-li__flex-item {
+            align-items: flex-start;
+
+            > .c-roadmap-content__flex-item:nth-child(1) {
+                order: 1;
+                padding-left: 0;
+            }
+            > .c-roadmap-content__flex-item:nth-child(2) {
+                order: 2;
+            }
+        }
+    }
+
+    &:first-of-type {
+        flex-direction: column;
+        align-items: center;
+
+        .c-roadmap-content__flex-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .c-roadmap-content__flex-item {
+            align-items: center;
+
+            p {
+                text-align: center;
+                flex: 1 1 auto;
+            }
+        }
+
+        > .c-roadmap-event-li__flex-item {
+            > .c-roadmap-content__flex-item:nth-child(1) {
+                order: 1;
+                padding: 0.5em 0;
+            }
+            > .c-roadmap-content__flex-item:nth-child(2) {
+                order: 2;
+                padding: 0.5em 0;
+            }
+        }
+    }
+
+    &:last-of-type {
+        flex-direction: column;
+        align-items: center;
+
+        .c-roadmap-content__flex-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .c-roadmap-content__flex-item {
+            align-items: center;
+
+            p {
+                text-align: center;
+                flex: 1 1 auto;
+            }
+        }
+
+        > .c-roadmap-event-li__flex-item {
+            > .c-roadmap-content__flex-item:nth-child(1) {
+                order: 1;
+                padding: 0.5em 0;
+            }
+            > .c-roadmap-content__flex-item:nth-child(2) {
+                order: 2;
+                padding: 0.5em 0;
+            }
+        }
+    }
+}
+
+.c-roadmap-event-li__flex-item {
+    flex: 1 1 auto;
+}
+
+.c-roadmap-content__flex-item {
+    flex: 1 1 auto;
+}

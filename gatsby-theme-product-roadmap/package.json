@@ -1,0 +1,27 @@
+{
+    "name": "@lpmraven/gatsby-theme-product-roadmap",
+    "version": "1.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "gatsby build",
+        "clean": "gatsby clean",
+        "develop": "gatsby develop"
+    },
+    "peerDependencies": {
+        "gatsby": "^2.24.57",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "gatsby": "^2.24.57",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "dependencies": {
+        "gatsby-plugin-sass": "^2.3.12",
+        "gatsby-source-filesystem": "^2.3.29",
+        "gatsby-transformer-yaml": "^2.4.11",
+        "node-sass": "^4.14.1"
+    }
+}
